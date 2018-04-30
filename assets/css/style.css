@@ -1,0 +1,82 @@
+body {
+    background-image: url(../images/gray.jpg)
+}
+
+.gif-card {
+    width: 350px;
+    max-height: 300px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+    border: black double 5px;
+}
+
+img {
+    width: 100%;
+    height: 250px;
+}
+
+#gif-keyword {
+    width: 25%;
+    margin-left: 10px;
+}
+
+.additionButton {
+    text-align: center;
+}
+
+#buttons {
+    text-align: center;
+}
+
+.btn-keyword {
+    background-color: white;
+    border: black double;
+    color:black;
+    box-shadow: 0;
+    margin-top: 10px;
+}
+
+.btn-keyword:hover {
+    background-color: #F8F8FF;
+    border-color: black;
+    color: black;
+}
+
+#add-gif {
+    background-color: white;
+    border: black double;
+    color: black;
+}
+
+#add-gif:hover {
+    background-color: #F8F8FF;
+    border-color: black;
+    color: black;
+}
+
+#gif-keyword {
+    border: black double;
+    border-radius: 25px;
+    height: 40px;
+    font-size: 15px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+#gif-keyword:focus {
+    outline: none;
+}
+
+#gif-keyword:hover {
+    border-color: black;
+}
+
+p {
+    border-top: black double 5px; 
+    padding-top: 5px;
+}
