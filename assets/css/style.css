@@ -47,6 +47,12 @@ img {
     color: black;
 }
 
+.btn:focus,.btn:active {
+    outline: none;
+    box-shadow: none;
+ }
+ 
+
 #add-gif {
     background-color: white;
     border: black double;
