@@ -15,15 +15,9 @@ $(document).ready(function () {
         "fruit",
     ]
 
-    // GET API KEY FROM WEBSITE AND CREATE VARIABLE
-    // GET LINK TO GIPHY URL + API KEY + KEY VALUES (LOOK AT MARK'S PICTURE)
     var API_KEY = "u9LxMBpzQKk3zDQymrpT5cbGas4W95Cs";
     var requestUrl = "http://api.giphy.com/v1/gifs/search?api_key=" + API_KEY + "&limit=10&q=";
 
-    // CREATE BUTTON
-    // GIVE THE BUTTON BOOTSTRAP VALUE
-    // ADD TEXT FROM TOPIC ARRAY TO BUTTONS 
-    // DIPLAY BUTTONS ON TO SCREEN
     for (var i = 0; i < topics.length; i++) {
         var button = $("<button>");
         button.addClass("btn btn-info btn-keyword");
@@ -34,7 +28,6 @@ $(document).ready(function () {
     function createImage(response, i) {
         var img = $("<img>");
         img.addClass("gif-image")
-        // SET THE SRC OF THE ELEMENT
         img.attr("src", response.data[i].images.downsized.url);
         img.attr("data-animated", response.data[i].images.downsized.url);
         img.attr("data-still", response.data[i].images.downsized_still.url);
@@ -55,6 +48,8 @@ $(document).ready(function () {
         var keyword = $("#gif-keyword").val();
         console.log(keyword);
 
+        $("#gif-keyword").val("");
+
         var button = $("<button>");
         button.addClass("btn btn-info btn-keyword");
         button.text(keyword);
@@ -70,11 +65,8 @@ $(document).ready(function () {
         var state = $(this).attr("data-state");
         console.log(state);
 
-        // IF THE DATA-STATE IS ANIMATED
         if (state === "animated") {
-            // CHANGE THE DATA-STATE TO STILL
             $(this).attr("data-state", "still")
-            //CHANGE THE SRC FROM THE ANIMATED TO THE STILL VERSION
             $(this).attr("src", $(this).attr("data-still"))
         } else {
             $(this).attr("data-state", "animated")
