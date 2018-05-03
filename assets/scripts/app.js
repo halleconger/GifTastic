@@ -16,7 +16,7 @@ $(document).ready(function () {
     ]
 
     var API_KEY = "u9LxMBpzQKk3zDQymrpT5cbGas4W95Cs";
-    var requestUrl = "http://api.giphy.com/v1/gifs/search?api_key=" + API_KEY + "&limit=10&q=";
+    var requestUrl = "https://api.giphy.com/v1/gifs/search?api_key=" + API_KEY + "&limit=10&q=";
 
     for (var i = 0; i < topics.length; i++) {
         var button = $("<button>");
